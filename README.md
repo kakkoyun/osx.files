@@ -1,4 +1,4 @@
 osx.files
 ========
 
-Configuration Files of my OS X System
+Personal Configuration Files for OS X 
