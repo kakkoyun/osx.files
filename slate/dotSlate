@@ -1,0 +1,87 @@
+# Configs
+# ==========
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config checkDefaultsOnLoad true
+config focusCheckWidthMax 3000
+config windowHintsShowIcons true
+config windowHintsBackgroundColor 96;96;64;0.5
+config windowHintsIgnoreHiddenWindows true
+config windowHintsSpread true
+config windowHintsSpreadPadding 40
+config windowHintsSpreadSearchWidth 80
+config windowHintsSpreadSearchHeight 80
+config switchIconPadding 2
+config switchBackgroundColor 50;53;58;0.7
+config switchSelectedPadding 4
+config switchIconSize 96
+config switchShowTitles true
+config switchFontSize 11
+config switchRoundedCornerSize 4
+config undoOps move,resize
+config secondsBetweenRepeat 0.1
+# config windowHintsOrder persist
+
+# Abstract positions
+# ==========
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+
+# Bindings
+# ==========
+alias hyper ctrl;alt;cmd
+
+
+# Bind window hinting to cmd+e, using the given letters
+# use whatever keys you want
+bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
+
+# Press cmd+g to get a grid, drag on that
+# grid to determine the size of an app
+bind g:cmd grid padding:5 0:6,2 1:8,2
+
+# Use the Slate task switcher (beta)
+# bind tab:cmd switch
+
+# Throws
+# ==========
+# Send a program to a particular screen
+bind n:${hyper} throw next
+bind k:${hyper} throw right resize
+bind j:${hyper}  throw left  resize
+bind o:${hyper} throw 1 resize
+bind p:${hyper} throw 0 resize
+
+# Location Bindings
+# ==========
+bind space:${hyper}   ${full}
+bind right:${hyper}   ${righthalf}
+bind left:${hyper}    ${lefthalf}
+bind 1:${hyper}       ${bottomleft}
+bind 2:${hyper}       ${bottomright}
+bind 3:${hyper}       ${topright}
+bind 4:${hyper}       ${topleft}
+
+bind up:${hyper} push top bar-resize:screenSizeY/2
+bind down:${hyper} push bottom bar-resize:screenSizeY/2
+
+bind /:${hyper} undo
+
+# Focus Bindings
+# ==========
+# Shift focus to the app to the
+bind ]:ctrl         focus right
+bind [:ctrl         focus left
+bind ;:ctrl         focus up
+bind ':ctrl         focus down
+bind .:${hyper}     focus behind
+
+# Applications
+# ==========
+bind return:${hyper} shell /Applications/iTerm.app/Contents/MacOS/iTerm
