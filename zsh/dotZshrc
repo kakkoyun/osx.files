@@ -11,26 +11,11 @@ ZSH_THEME="kphoen"
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 
-# Lets sugar a little bit.
-alias -g lss='ls -al'
-alias -g L='| less'
-alias -g C='| colorize'
-alias -g G='| grep -i'
-alias -g CD='| colordiff'
-alias -g W='which'
-
-# Additionla to git plugin.
-alias -g gcam='git commit -a -v -m'
-alias -g gcmm='git commit -v -m'
-alias -g gsync='git pull && git push'
-
-# Emacs Related
-alias emacs!="emacs -q --load '~/.emacs.d/personal/custom_term.el'"
+source ~/.aliases
 
 # Vim Related
 export TERM='xterm-256color'
 # export TERM='screen-256color'
-
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -61,33 +46,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
-# Compinit
-autoload -U compinit
-compinit
-
-# Autojump
-[[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
-
-# VirtualEnv
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
-
-if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-else
-    echo "WARNING: Can't find virtualenvwrapper.sh"
-fi
-
-# Highlight
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Force Language
-export LC_ALL=en_US.UTF-8
-export LC=en_US.UTF-8
+source ~/.zshrc.local
