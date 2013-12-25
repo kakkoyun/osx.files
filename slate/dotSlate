@@ -53,8 +53,8 @@ bind g:cmd grid padding:5 0:6,2 1:8,2
 # ==========
 # Send a program to a particular screen
 bind n:${hyper} throw next
-bind k:${hyper} throw right resize
-bind j:${hyper}  throw left  resize
+bind l:${hyper} throw right resize
+bind h:${hyper}  throw left  resize
 bind o:${hyper} throw 1 resize
 bind p:${hyper} throw 0 resize
 
@@ -78,8 +78,8 @@ bind /:${hyper} undo
 # Shift focus to the app to the
 bind ]:ctrl         focus right
 bind [:ctrl         focus left
-bind ;:ctrl         focus up
-bind ':ctrl         focus down
+bind j:ctrl         focus up
+bind k:ctrl         focus down
 bind .:${hyper}     focus behind
 
 # Applications
