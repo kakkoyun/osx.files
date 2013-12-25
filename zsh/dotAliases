@@ -1,0 +1,24 @@
+# Safety Net.
+alias -g rm='safe-rm -i'
+
+# Lets sugar a little bit.
+alias -g lss='ls -alh'
+alias -g L='| less'
+alias -g C='| colorize'
+alias -g G='| grep -i'
+alias -g CD='| colordiff'
+alias -g W='which'
+
+# Additional to git plugin.
+alias -g gcam='git commit -a -v -m'
+alias -g gcmm='git commit -v -m'
+alias -g gsync='git pull && git push'
+
+
+# Emacs Related
+alias ed='emacs --daemon'
+alias e='emacsclient -t'
+alias ec='emacsclient -c'
+
+# Other Apps
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
