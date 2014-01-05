@@ -1,0 +1,12 @@
+[
+  { "keys": ["ctrl+shift+."], "command": "erb" },
+  { "keys": ["super+alt+up"], "command": "goto_python_definition"},
+
+  // Delete a line with cmd+delete
+  { "keys": ["super+backspace"], "command": "run_macro_file", "args": {
+      "file": "Packages/Default/Delete Line.sublime-macro"
+  }},
+
+  // Reindent selection with cmd+alt+L
+  { "keys": ["super+alt+l"], "command": "reindent"}
+]
