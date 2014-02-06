@@ -1,6 +1,6 @@
 TO-DO
 =================
 
-[] Proper Shell scripts for installation.
-[] Emacs
-[] Basic Vim
+- [ ] Proper Shell scripts for installation.
+- [ ] Emacs
+- [ ] Basic Vim
