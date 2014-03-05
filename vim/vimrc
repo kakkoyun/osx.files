@@ -64,7 +64,7 @@ let g:NERDSpaceDelims = 1
 "let Tlist_WinWidth=35
 "let Tlist_Exit_OnlyWindow=1
 "let Tlist_File_Fold_Auto_Close=1
-let tagbar_autoshowtag=1
+let tagbar_autoshowtag = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                                          "

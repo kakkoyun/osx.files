@@ -2,8 +2,11 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# Postgres93
+PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH:$PATH"
+
 # Plugins
-plugins=(git rysnc pip battery zsh-syntax-highlighting brew autojump osx sublime colorize virtualenvwrapper virtualenv colored-man python django git-flow github gem bundler heroku rails rake rbenv ruby zeus sbt scala ssh-agent gradle)
+plugins=(git rysnc pip battery zsh-syntax-highlighting brew autojump osx sublime colorize virtualenvwrapper virtualenv colored-man python django git-flow github gem bundler heroku rails rake rbenv ruby zeus sbt scala ssh-agent gradle node)
 
 # Compinit
 autoload -U compinit
