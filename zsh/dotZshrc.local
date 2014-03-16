@@ -1,64 +1,14 @@
-_CONFIG_HOST_SYSTEM=`uname`
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# Postgres93
-PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH:$PATH"
-
 # Plugins
 plugins=(git rysnc pip battery zsh-syntax-highlighting brew autojump osx sublime colorize virtualenvwrapper virtualenv colored-man python django git-flow github gem bundler heroku rails rake rbenv ruby zeus sbt scala ssh-agent gradle node)
 
 # Autocompletion
 autoload -U compinit && compinit
-unsetopt menu_complete   # do not autoselect the first completion entry
+unsetopt menu_complete
 unsetopt flowcontrol
 
-setopt auto_menu         # show completion menu on succesive tab press
+setopt auto_menu
 setopt complete_in_word
 setopt always_to_end
 
 # Autojump
 [[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
-
-# VirtualEnv
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
-
-if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-else
-    echo "WARNING: Can't find virtualenvwrapper.sh"
-fi
-
-# Highlight
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# History
-export HISTFILE=~/.zsh_cache/zsh_history
-export HISTSIZE=50000
-export SAVEHIST=50000
-export HISTCONTROL=ignoredups
-
-# Editors
-export SVN_EDITOR="vim"
-export EDITOR="vim"
-export GIT_EDITOR="vim"
-
-# Force Language
-export LC_ALL=en_US.UTF-8
-export LC=en_US.UTF-8
-
-# Term
-export TERM="screen-256color"
-
-# Fix zsh git slowness. Very Useful.
-# http://marc-abramowitz.com/archives/2012/04/10/fix-for-oh-my-zsh-git-svn-prompt-slowness/
-function git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
-}

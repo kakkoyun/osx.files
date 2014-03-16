@@ -11,13 +11,6 @@ ZSH_THEME="suvash" # "kphoen" "juanghurtado" "bira"
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 
-# Aliases
-source ~/.aliases
-
-# Vim Related
-export TERM='xterm-256color'
-# export TERM='screen-256color'
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -40,7 +33,11 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
+# Local settings
 source ~/.zshrc.local
+
+# Aliases
+source ~/.aliases
 
 source $ZSH/oh-my-zsh.sh
 
