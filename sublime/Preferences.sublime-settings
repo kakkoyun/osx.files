@@ -3,7 +3,7 @@
 	"auto_indent": true,
 	"bold_folder_labels": true,
 	"caret_style": "solid",
-	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/User/RailsCastsColorScheme (SL).tmTheme",
 	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
@@ -13,9 +13,10 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"sublime-github",
 		"Vintage",
-		"Tomorrow Color Schemes",
-		"Javatar"
+		"Javatar",
+		"SublimeGit"
 	],
 	"indent_guide_options":
 	[
@@ -38,7 +39,7 @@
 	"soda_folder_icons": true,
 	"spell_check": true,
 	"tab_size": 2,
-	"theme": "amCoder.sublime-theme",
+	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
