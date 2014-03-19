@@ -1,3 +1,9 @@
+# File system operations.
+alias cp="cp -v"
+alias mv="nocorrect mv -v -i"
+alias -g rm='safe-rm -i -v'
+alias clr="clear"
+
 # Lets sugar a little bit.
 alias -g lss='ls -alh'
 alias -g L='| less -R'
@@ -9,14 +15,7 @@ alias -g C='| colorize'
 alias -g G='| grep --color=always -i'
 alias -g CD='| colordiff'
 
-# File system operations.
-alias cp="cp -v"
-alias mv="mv -v"
-alias -g rm='safe-rm -i -v'
-# alias rm="rm -v"
-alias cls="clear"
-
-# State operations, cd.
+# State operations, cd. Also common-aliases plugin can be used.
 alias ..="cd ../"
 alias ...="cd ../.."
 alias ....="cd ../../.."
