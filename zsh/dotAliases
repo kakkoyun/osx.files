@@ -28,10 +28,13 @@ alias -g gcmm='git commit -v -m'
 alias -g gsync='git pull && git push'
 alias -g gpall='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
 
-# Emacs Related
+# Emacs
 alias ed='emacs --daemon'
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
+
+# vim 
+alias vim='mvim -v'
 
 # tmux
 alias tmux-new="TERM=xterm-256color tmux -2 new-session -s $1"

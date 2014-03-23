@@ -26,7 +26,6 @@
 		"HTML5",
 		"IntelliDocs",
 		"iOpener",
-		"Javatar",
 		"LaTeX Snippets",
 		"LaTeXTools",
 		"LineEndings",
@@ -49,11 +48,9 @@
 		"Status Bar Extension",
 		"Status Bar Time",
 		"Status Bar Weather",
-		"sublime-github",
 		"SublimeAlternate",
 		"SublimeCodeIntel",
 		"SublimeERB",
-		"SublimeGit",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
 		"SublimeLinter-coffee",
@@ -75,6 +72,7 @@
 		"Theme - Soda",
 		"Theme - Sodarized",
 		"TrailingSpaces",
+		"Vintageous",
 		"WakaTime"
 	]
 }
