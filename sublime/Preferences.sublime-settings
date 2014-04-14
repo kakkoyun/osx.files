@@ -3,7 +3,7 @@
 	"auto_indent": true,
 	"bold_folder_labels": true,
 	"caret_style": "solid",
-	"color_scheme": "Packages/User/RailsCastsColorScheme (SL).tmTheme",
+	"color_scheme": "Packages/Railscasts Extended/Railscasts Extended.tmTheme",
 	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
@@ -13,7 +13,12 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Javatar",
+		"Vintageous",
+		"SublimeSimpleSync",
+		"RubyTest",
+		"Vintage",
+		"SublimeLinter-pep8"
 	],
 	"indent_guide_options":
 	[

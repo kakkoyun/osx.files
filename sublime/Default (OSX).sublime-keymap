@@ -18,5 +18,7 @@
     }},
 
   // IntelliDocs
-  { "keys": ["f2"], "command": "intelli_docs" }
-]
+  { "keys": ["f2"], "command": "intelli_docs" },
+
+  { "keys": ["super+shifth+h"], "command": "hash_syntax" }
+  ]

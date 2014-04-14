@@ -3,6 +3,7 @@ alias cp="cp -v"
 alias mv="nocorrect mv -v -i"
 alias -g rm='safe-rm -i -v'
 alias clr="clear"
+alias Trash="open ~/.Trash"
 
 # Lets sugar a little bit.
 alias -g lss='ls -alh'
@@ -33,7 +34,7 @@ alias ed='emacs --daemon'
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
 
-# vim 
+# vim
 alias vim='mvim -v'
 
 # tmux
