@@ -1,5 +1,10 @@
 # Plugins
-plugins=(git rysnc pip battery zsh-syntax-highlighting brew autojump osx sublime colorize virtualenvwrapper virtualenv colored-man python django git-flow github gem bundler heroku rails rake-fast rbenv ruby zeus sbt scala ssh-agent gradle node mvn pod thor tmux web-search capistrano dirhistory git-extras copydir copyfile xcode zsh_reload)
+plugins=(git rysnc pip battery zsh-syntax-highlighting brew autojump osx
+         sublime colorize virtualenvwrapper virtualenv colored-man python
+         django git-flow github gem bundler heroku rails rake-fast rbenv
+         ruby zeus sbt scala ssh-agent gradle node mvn pod thor tmux
+         web-search capistrano dirhistory git-extras copydir copyfile xcode
+         zsh_reload per-directory-history)
 
 # Autocompletion
 autoload -U compinit && compinit
