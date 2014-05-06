@@ -14,15 +14,12 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"GitGutter",
 		"Monokai Extended",
 		"Javatar",
-		"Color Highlighter",
 		"Railscasts Extended",
 		"Vintage",
 		"RubyTest",
 		"SublimeHaskell",
-		"Vintageous",
 		"Solarized Color Scheme"
 	],
 	"indent_guide_options":

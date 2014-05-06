@@ -71,7 +71,7 @@ bind 4:${hyper}       ${topleft}
 bind up:${hyper} push top bar-resize:screenSizeY/2
 bind down:${hyper} push bottom bar-resize:screenSizeY/2
 
-bind /:${hyper} undo
+bind u:${hyper} undo
 
 # Focus Bindings
 # ==========
