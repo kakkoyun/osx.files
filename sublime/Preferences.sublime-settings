@@ -14,12 +14,12 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Monokai Extended",
-		"Javatar",
 		"Railscasts Extended",
 		"Vintage",
-		"RubyTest",
+		"Javatar",
 		"SublimeHaskell",
+		"Monokai Extended",
+		"RubyTest",
 		"Solarized Color Scheme"
 	],
 	"indent_guide_options":
