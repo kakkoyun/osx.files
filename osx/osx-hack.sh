@@ -355,18 +355,6 @@ echo ""
 echo "Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
-
-###############################################################################
-# Terminal
-###############################################################################
-
-echo ""
-echo "Enabling UTF-8 ONLY in Terminal.app and setting the Pro theme by default"
-defaults write com.apple.terminal StringEncodings -array 4
-defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
-defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
-
-
 ###############################################################################
 # Time Machine
 ###############################################################################
@@ -395,32 +383,6 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 echo ""
 echo "Disable continuous spell checking"
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
-
-
-###############################################################################
-# Transmission.app                                                            #
-###############################################################################
-
-echo ""
-echo "Use `~/Downloads/Incomplete` to store incomplete downloads"
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
-
-echo ""
-echo "Donâ€™t prompt for confirmation before downloading"
-defaults write org.m0k.transmission DownloadAsk -bool false
-
-echo ""
-echo "Trash original torrent files"
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-echo ""
-echo "Hide the donate message"
-defaults write org.m0k.transmission WarningDonate -bool false
-
-echo ""
-echo "Hide the legal disclaimer"
-defaults write org.m0k.transmission WarningLegal -bool false
 
 
 ###############################################################################
