@@ -5,23 +5,10 @@ alias -g rm='safe-rm -i -v'
 alias clr="clear"
 alias Trash="open ~/.Trash"
 
-# Lets sugar a little bit.
-alias -g lss='ls -alh'
-alias -g L='| less -R'
-alias -g V="| vim -"
-alias -g ww='which'
-
 # Color
 alias -g C='| colorize'
 alias -g G='| grep --color=always -i'
 alias -g CD='| colordiff'
-
-# State operations, cd. Also common-aliases plugin can be used.
-alias ..="cd ../"
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ......="cd ../../../.."
 
 # Git
 alias -g gcam='git commit -a -v -m'

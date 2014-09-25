@@ -7,7 +7,9 @@ config checkDefaultsOnLoad true
 config focusCheckWidthMax 3000
 config windowHintsShowIcons true
 config windowHintsBackgroundColor 96;96;64;0.5
-config windowHintsIgnoreHiddenWindows true
+config windowHintsIgnoreHiddenWindows false
+# config windowHintsOrder persist
+# config windowHintsDuration 1
 config windowHintsSpread true
 config windowHintsSpreadPadding 40
 config windowHintsSpreadSearchWidth 80
@@ -21,7 +23,16 @@ config switchFontSize 11
 config switchRoundedCornerSize 4
 config undoOps move,resize
 config secondsBetweenRepeat 0.1
-# config windowHintsOrder persist
+
+# Monitor Aliases
+alias mon-mac       0
+alias mon-samsung   1
+
+# Misc Aliases
+alias showHintsLeftHand hint AOEUIYQJKX
+alias showNormalHint hint AOEUIDHTNSYXFBPKGMCW
+alias browser 'Safari'
+alias editor 'Sublime'
 
 # Abstract positions
 # ==========
@@ -33,14 +44,46 @@ alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
 alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
 alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 
+# # Concrete positions
+# alias 1-full move screenOriginX;screenOriginY screenSizeX;screenSizeY ${mon-mac}
+# alias 1-left move screenOriginX;screenOriginY screenSizeX/2;screenSizeY ${mon-mac}
+# alias 1-right move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY ${mon-mac}
+# alias 2-left move screenOriginX;screenOriginY screenSizeX/2;screenSizeY ${mon-samsung}
+# alias 2-right move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY ${mon-samsung}
+# alias 2-topright move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2 ${mon-samsung}
+# alias 2-bottomright move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2 ${mon-samsung}
+
+# # 2 Monitor layout
+# layout 2monitors 'iTerm':MAIN_FIRST                       ${2-bottomright} | ${1-left}
+# layout 2monitors 'Safari':REPEAT                          ${1-full}
+# layout 2monitors 'Google Chrome':REPEAT                   ${1-full}
+# layout 2monitors 'Sublime Text 3':REPEAT                  ${1-full}
+# layout 2monitors 'MacVim':REPEAT                          ${1-full}
+# layout 2monitors 'Mail':MAIN_FIRST                        ${2-left}
+# layout 2monitors 'Xcode':REPEAT                           ${1-full}
+# layout 2monitors 'iTunes':REPEAT                          ${1-full}
+
+# # 1 Monitor layout
+# layout 1monitor 'iTerm':MAIN_FIRST                       ${1-right}
+# layout 1monitor 'Sublime Text 3':MAIN_FIRST              ${1-left}
+# layout 1monitor 'MacVim':MAIN_FIRST                      ${1-left}
+# layout 1monitor 'Safari':REPEAT                          ${1-full}
+# layout 1monitor 'Google Chrome':REPEAT                   ${1-full}
+# layout 1monitor 'Mail':MAIN_FIRST                        ${1-full}
+# layout 1monitor 'Xcode':REPEAT                           ${1-full}
+# layout 1monitor 'iTunes':REPEAT                          ${1-full}
+
+# Default Layouts
+default 2monitors resolutions:${mon-mac};${mon-samsung};
+default 1monitor  resolutions:${mon-mac}
+
 # Bindings
 # ==========
 alias hyper ctrl;alt;cmd
 
-
 # Bind window hinting to cmd+e, using the given letters
 # use whatever keys you want
-bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
+bind e:cmd hint ${showNormalHint}
 
 # Press cmd+g to get a grid, drag on that
 # grid to determine the size of an app
@@ -76,12 +119,28 @@ bind u:${hyper} undo
 # Focus Bindings
 # ==========
 # Shift focus to the app to the
-bind ]:ctrl         focus right
-bind [:ctrl         focus left
-bind j:ctrl         focus up
-bind k:ctrl         focus down
-bind .:${hyper}     focus behind
+bind ]:ctrl          focus right
+bind [:ctrl          focus left
+bind j:ctrl          focus up
+bind k:ctrl          focus down
+bind .:${hyper}      focus behind
+
+bind z:${hyper} undo
+
+# Throws
+bind n:${hyper} throw next
+bind f:${hyper} throw 1 resize
+bind g:${hyper} throw 0 resize
+
+# Slate
+bind backslash:${hyper} relaunch
 
 # Applications
 # ==========
-bind return:${hyper} shell /Applications/iTerm.app/Contents/MacOS/iTerm
+bind t:${hyper} shell /Applications/iTerm.app/Contents/MacOS/iTerm
+bind e:${hyper} focus ${browser}
+bind u:${hyper} focus ${editor}
+bind x:${hyper} focus 'Xcode'
+bind g:${hyper} focus 'GitHub'
+bind m:${hyper} focus 'Mail'
+bind i:${hyper} focus 'iTerm'

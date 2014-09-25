@@ -1,5 +1,8 @@
 _CONFIG_HOST_SYSTEM=`uname`
 
+# Path
+# export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+
 # Highlight
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -42,14 +45,7 @@ eval "$(rbenv init -)"
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # Postgres93
-PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH:$PATH"
-
-# Fix zsh git slowness. Very Useful.
-# http://marc-abramowitz.com/archives/2012/04/10/fix-for-oh-my-zsh-git-svn-prompt-slowness/
-function git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
-}
+PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH:$PATH"
 
 # Keep
 function commands() {

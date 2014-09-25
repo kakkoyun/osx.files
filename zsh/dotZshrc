@@ -33,14 +33,10 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-# Aliases
-source ~/.aliases
-
 # Local settings
 source ~/.zshrc.local
 
+# Aliases
+source ~/.aliases
+
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
-
