@@ -47,7 +47,7 @@ echo ""
 ###############################################################################
 
 echo ""
-echo "Setting your computer name (as done via System Preferences â†’ Sharing)"
+echo "Setting your  name (as done via System Preferences â†’ Sharing)"
 echo "What would you like it to be?"
 read COMPUTER_NAME
 sudo scutil --set ComputerName $COMPUTER_NAME
@@ -76,7 +76,7 @@ echo "Disabling OS X Gate Keeper"
 echo "(You'll be able to install any app you want from here on, not just Mac App Store apps)"
 sudo spctl --master-disable
 sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+defaults write com.apple.LaunchServices LSQuarantine -bool NO
 
 echo ""
 echo "Increasing the window resize speed for Cocoa applications"
@@ -84,30 +84,30 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 echo ""
 echo "Expanding the save panel by default"
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool YES
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool YES
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool YES
 
 echo ""
 echo "Automatically quit printer app once the print jobs complete"
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool YES
 
 # Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
 echo ""
 echo "Displaying ASCII control characters using caret notation in standard text views"
-defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
+defaults write NSGlobalDomain NSTextShowsControlCharacters -bool YES
 
 echo ""
 echo "Disabling system-wide resume"
-defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool NO
 
 echo ""
 echo "Disabling automatic termination of inactive apps"
-defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool YES
 
 echo ""
 echo "Saving to disk (not to iCloud) by default"
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool NO
 
 echo ""
 echo "Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window"
@@ -127,8 +127,8 @@ echo "Remove duplicates in the â€œOpen Withâ€ menu"
 
 echo ""
 echo "Disable smart quotes and smart dashes as theyâ€™re annoying when typing code"
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool NO
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool NO
 
 
 ###############################################################################
@@ -145,7 +145,7 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 echo ""
 echo "Disabling press-and-hold for keys in favor of a key repeat"
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool NO
 
 echo ""
 echo "Setting a blazingly fast keyboard repeat rate (ain't nobody got time fo special chars while coding!)"
@@ -153,7 +153,7 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 
 echo ""
 echo "Disabling auto-correct"
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool NO
 
 echo ""
 echo "Setting trackpad & mouse speed to a reasonable number"
@@ -208,7 +208,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 echo ""
 echo "Enable HiDPI display modes (requires restart)"
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool YES
 
 ###############################################################################
 # Finder
@@ -216,13 +216,13 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 
 echo ""
 echo "Showing icons for hard drives, servers, and removable media on the desktop"
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool YES
 
 echo ""
 echo "Show hidden files in Finder by default?"
 select yn in "Yes" "No"; do
   case $yn in
-    Yes ) defaults write com.apple.Finder AppleShowAllFiles -bool true
+    Yes ) defaults write com.apple.Finder AppleShowAllFiles -bool YES
         break;;
     No ) break;;
   esac
@@ -232,7 +232,7 @@ echo ""
 echo "Show dotfiles in Finder by default?"
 select yn in "Yes" "No"; do
   case $yn in
-    Yes ) defaults write com.apple.finder AppleShowAllFiles TRUE
+    Yes ) defaults write com.apple.finder AppleShowAllFiles YES
         break;;
     No ) break;;
   esac
@@ -240,23 +240,23 @@ done
 
 echo ""
 echo "Showing all filename extensions in Finder by default"
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write NSGlobalDomain AppleShowAllExtensions -bool YES
 
 echo ""
 echo "Showing status bar in Finder by default"
-defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowStatusBar -bool YES
 
 echo ""
 echo "Allowing text selection in Quick Look/Preview in Finder by default"
-defaults write com.apple.finder QLEnableTextSelection -bool true
+defaults write com.apple.finder QLEnableTextSelection -bool YES
 
 echo ""
 echo "Displaying full POSIX path as Finder window title"
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
 echo ""
 echo "Disabling the warning when changing a file extension"
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool NO
 
 echo ""
 echo "Use column view in all Finder windows by default"
@@ -264,13 +264,13 @@ defaults write com.apple.finder FXPreferredViewStyle Clmv
 
 echo ""
 echo "Avoiding the creation of .DS_Store files on network volumes"
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool YES
 
 echo ""
 echo "Disabling disk image verification"
-defaults write com.apple.frameworks.diskimages skip-verify -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+defaults write com.apple.frameworks.diskimages skip-verify -bool YES
+defaults write com.apple.frameworks.diskimages skip-verify-locked -bool YES
+defaults write com.apple.frameworks.diskimages skip-verify-remote -bool YES
 
 echo ""
 echo "Enabling snap-to-grid for icons on the desktop and in other icon views"
@@ -295,11 +295,11 @@ defaults write com.apple.dock tilesize -int 36
 echo ""
 echo "Speeding up Mission Control animations and grouping windows by application"
 defaults write com.apple.dock expose-animation-duration -float 0.1
-defaults write com.apple.dock "expose-group-by-app" -bool true
+defaults write com.apple.dock "expose-group-by-app" -bool YES
 
 echo ""
 echo "Setting Dock to auto-hide and removing the auto-hiding delay"
-defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide -bool YES
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 
@@ -310,11 +310,11 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 
 echo ""
 echo "Hiding Safariâ€™s bookmarks bar by default"
-defaults write com.apple.Safari ShowFavoritesBar -bool false
+defaults write com.apple.Safari ShowFavoritesBar -bool NO
 
 echo ""
 echo "Hiding Safariâ€™s sidebar in Top Sites"
-defaults write com.apple.Safari ShowSidebarInTopSites -bool false
+defaults write com.apple.Safari ShowSidebarInTopSites -bool NO
 
 echo ""
 echo "Disabling Safariâ€™s thumbnail cache for History and Top Sites"
@@ -322,11 +322,11 @@ defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
 echo ""
 echo "Enabling Safariâ€™s debug menu"
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool YES
 
 echo ""
 echo "Making Safariâ€™s search banners default to Contains instead of Starts With"
-defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
+defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool NO
 
 echo ""
 echo "Removing useless icons from Safariâ€™s bookmarks bar"
@@ -334,17 +334,17 @@ defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 
 echo ""
 echo "Allow hitting the Backspace key to go to the previous page in history"
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool YES
 
 echo ""
 echo "Enabling the Develop menu and the Web Inspector in Safari"
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -bool YES
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool YES
+defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool YES
 
 echo ""
 echo "Adding a context menu item for showing the Web Inspector in web views"
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool YES
 
 
 ###############################################################################
@@ -353,7 +353,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 echo ""
 echo "Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool NO
 
 ###############################################################################
 # Time Machine
@@ -361,7 +361,7 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 echo ""
 echo "Preventing Time Machine from prompting to use new hard drives as backup volume"
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool YES
 
 echo ""
 echo "Disabling local Time Machine backups"
@@ -374,15 +374,15 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 echo ""
 echo "Disable automatic emoji substitution (i.e. use plain text smileys)"
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool NO
 
 echo ""
 echo "Disable smart quotes as itâ€™s annoying for messages that contain code"
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool NO
 
 echo ""
 echo "Disable continuous spell checking"
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool NO
 
 
 ###############################################################################
@@ -417,7 +417,7 @@ sudo pmset -a displaysleep 0
 
 echo ""
 echo "Disable annoying backswipe in Chrome"
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool NO
 
 
 ###############################################################################
@@ -435,7 +435,7 @@ select yn in "Yes" "No"; do
         git config --global core.editor "subl -n -w"
         echo ""
         echo "Removing Mission Control as it interferes with Sublime Text keyboard shortcut for selecting multiple lines"
-        defaults write com.apple.dock mcx-expose-disabled -bool TRUE
+        defaults write com.apple.dock mcx-expose-disabled -bool YES
         break;;
     No ) break;;
   esac

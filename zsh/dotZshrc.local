@@ -1,11 +1,5 @@
 # Plugins
-plugins=(git git-flow git-extras git-promt git-remote-branch git-fast gitignore
-          rysnc pip zsh-syntax-highlighting brew brew-cask autojump
-          osx sublime colorize virtualenvwrapper virtualenv colored-man python
-          django github gem bundler rails rake-fast rbenv ruby sbt scala ssh-agent
-          gradle pod web-search capistrano dirhistory copydir copyfile xcode zsh_reload
-          per-directory-history adb common-aliases cp dirhistory extract fabric
-          history postgres redis-cli supervisor svn-fast-info svn)
+plugins=(git git-flow git-extras git-promt git-remote-branch git-fast gitignore rysnc pip zsh-syntax-highlighting brew brew-cask autojump osx sublime colorize virtualenvwrapper virtualenv colored-man python django github gem bundler rails rake-fast rbenv ruby sbt scala ssh-agent gradle pod web-search capistrano dirhistory copydir copyfile xcode zsh_reload per-directory-history adb cp dirhistory extract fabric history postgres redis-cli supervisor svn-fast-info svn)
 
 # Autocompletion
 autoload -U compinit && compinit
