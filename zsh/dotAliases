@@ -1,16 +1,13 @@
 # File system operations.
-alias cp="cp -v"
-alias mv="nocorrect mv -v -i"
-alias -g rm='safe-rm -i -v'
-alias clr="clear"
 alias Trash="open ~/.Trash"
+alias clr="clear"
+alias cp='cp -i -v'
+# alias mv='mv -i'
+alias mv="nocorrect mv -v -i"
+# alias rm='rm -i'
+alias -g rm='safe-rm -i -v'
 
-# Color
-alias -g C='| colorize'
-alias -g G='| grep --color=always -i'
-alias -g CD='| colordiff'
-
-# Git
+# Git // Some redundancy with git plugin.
 alias -g gcam='git commit -a -v -m'
 alias -g gcmm='git commit -v -m'
 alias -g gsync='git pull && git push'
@@ -61,7 +58,8 @@ alias .....='cd ../../../../'
 # Command line head / tail shortcuts
 alias -g H='| head'
 alias -g T='| tail'
-alias -g G='| grep'
+# alias -g G='| grep'
+alias -g G='| grep --color=always -i'
 alias -g L="| less"
 alias -g M="| most"
 alias -g LL="2>&1 | less"
@@ -69,6 +67,10 @@ alias -g CA="2>&1 | cat -A"
 alias -g NE="2> /dev/null"
 alias -g NUL="> /dev/null 2>&1"
 alias -g P="2>&1| pygmentize -l pytb"
+
+# Color
+alias -g C='| colorize'
+alias -g CD='| colordiff'
 
 alias dud='du -d 1 -h'
 alias duf='du -sh *'
@@ -78,16 +80,12 @@ alias ff='find . -type f -name'
 alias h='history'
 alias hgrep="fc -El 0 | grep"
 alias help='man'
-# alias j='jobs'
+alias jb='jobs'
 alias p='ps -f'
 alias sortnr='sort -n -r'
 alias unexport='unset'
 
 alias whereami=display_info
-
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
 
 # zsh is able to auto-do some kungfoo
 # depends on the SUFFIX :)
