@@ -1,24 +1,10 @@
 [
+  { "keys": ["ctrl+i"], "command": "reindent"},
   { "keys": ["ctrl+shift+."], "command": "erb" },
-  { "keys": ["super+alt+up"], "command": "goto_python_definition"},
-
-  // Delete a line with cmd+delete
-  { "keys": ["super+backspace"], "command": "run_macro_file",
-  "args": {
+  { "keys": ["super+backspace"], "command": "run_macro_file", "args": {
     "file": "Packages/Default/Delete Line.sublime-macro"
-    }},
-
-  // Reindent selection with cmd+alt+L
-  { "keys": ["super+alt+l"], "command": "reindent"},
-
-  // Macros
-  { "keys": ["alt+shift+enter"], "command": "run_macro_file",
-  "args": {
-    "file": "Packages/User/InsertAfter.sublime-macro"
-    }},
-
-  // IntelliDocs
+    }
+  },
   { "keys": ["f2"], "command": "intelli_docs" },
-
   { "keys": ["super+shifth+h"], "command": "hash_syntax" }
-  ]
+]

@@ -4,7 +4,7 @@
 	"auto_indent": true,
 	"bold_folder_labels": true,
 	"caret_style": "solid",
-	"color_scheme": "Packages/User/base16-ocean.light (SL).tmTheme",
+	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
 	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
@@ -14,10 +14,11 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"PlainTasks",
-		"SublimeLinter-pep8",
 		"RubyTest",
-		"Vintage"
+		"SublimeLinter-pep257",
+		"Vintage",
+		"Markdown",
+		"SublimeLinter-pep8"
 	],
 	"indent_guide_options":
 	[
@@ -37,10 +38,10 @@
 	"show_full_path": true,
 	"show_tab_close_buttons": false,
 	"smart_indent": true,
-	"soda_folder_icons": true,
+	"soda_folder_icons": false,
 	"spell_check": true,
 	"tab_size": 2,
-	"theme": "Spacegray Light.sublime-theme",
+	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
