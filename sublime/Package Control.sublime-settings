@@ -1,4 +1,7 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"Alignment",
@@ -11,9 +14,9 @@
 		"C++ Starting Kit",
 		"C++11",
 		"Clang Format",
+		"Clickable URLs",
 		"CTags",
 		"DashDoc",
-		"Djaneiro",
 		"Emmet",
 		"ERB Autocomplete",
 		"ERB Snippets",
@@ -25,10 +28,13 @@
 		"IntelliDocs",
 		"iOpener",
 		"JSON Reindent",
+		"LaTeXTools",
 		"LineEndings",
 		"Markdown Extended",
 		"MultiEditUtils",
 		"Open",
+		"Package Control",
+		"PlainTasks",
 		"Preferences Editor",
 		"Pretty JSON",
 		"Python PEP8 Autoformat",
@@ -37,6 +43,7 @@
 		"Rails Migrations List",
 		"Railscasts Extended",
 		"Related Files",
+		"RuboCop",
 		"Ruby Block Converter",
 		"Ruby Hash Converter",
 		"Ruby on Rails snippets",

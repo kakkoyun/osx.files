@@ -4,21 +4,22 @@
 	"auto_indent": true,
 	"bold_folder_labels": true,
 	"caret_style": "solid",
-	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/User/Railscasts Extended (SublimePythonIDE).tmTheme",
 	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
 	"font_face": "Monaco",
-	"font_size": 13.0,
+	"font_size": 12.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"RubyTest",
-		"SublimeLinter-pep257",
 		"Vintage",
+		"SublimeLinter-pep8",
+		"Better CoffeeScript",
+		"RubyTest",
 		"Markdown",
-		"SublimeLinter-pep8"
+		"SublimeLinter-pep257"
 	],
 	"indent_guide_options":
 	[
