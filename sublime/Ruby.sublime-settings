@@ -1,0 +1,7 @@
+{
+  "ignored_packages": [
+      "SublimeLinter-pep8",
+      "SublimeLinter-pep257",
+      "Python PEP8 Autoformat"
+  ]
+}

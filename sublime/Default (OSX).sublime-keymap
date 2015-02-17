@@ -6,5 +6,18 @@
     }
   },
   { "keys": ["f2"], "command": "intelli_docs" },
-  { "keys": ["super+shifth+h"], "command": "hash_syntax" }
+  { "keys": ["super+shift+h"], "command": "hash_syntax" },
+  { "keys": ["alt+up"], "command": "expand_region" },
+  {
+    "keys": ["alt+down"],
+    "command": "expand_region",
+    "args": {"undo": true},
+    "context": [{ "key": "expand_region_soft_undo" }]
+  },
+  {
+    "keys": ["super+u"],
+    "command": "expand_region",
+    "args": {"undo": true},
+    "context": [{ "key": "expand_region_soft_undo" }]
+  }
 ]

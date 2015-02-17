@@ -1,8 +1,7 @@
 _CONFIG_HOST_SYSTEM=`uname`
 
 # Path
-# export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/bin
-
+# export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/bin:$PATH"
 
 # Highlight
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
@@ -40,13 +39,14 @@ fi
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Haskell, cabal
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # Postgres93
-PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
 # Keep
 function commands() {
