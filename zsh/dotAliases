@@ -4,8 +4,8 @@ alias clr="clear"
 alias cp='cp -i -v'
 # alias mv='mv -i'
 alias mv="nocorrect mv -v -i"
-# alias rm='rm -i'
-alias -g rm='safe-rm -i -v'
+alias rm='rm -i'
+# alias -g rm='safe-rm -i -v'
 
 # Git // Some redundancy with git plugin.
 alias -g gcam='git commit -a -v -m'
