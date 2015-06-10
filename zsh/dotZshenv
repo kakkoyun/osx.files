@@ -45,8 +45,8 @@ eval "$(rbenv init -)"
 # Haskell, cabal
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
-# Postgres93
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+# Postgres94
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 # Keep
 function commands() {

@@ -1,5 +1,22 @@
 # Plugins
-plugins=(git git-flow git-extras git-promt git-remote-branch gitfast gitignore rysnc pip zsh-syntax-highlighting brew brew-cask autojump osx sublime colorize virtualenvwrapper virtualenv colored-man python django github gem bundler rails rake-fast rbenv ruby sbt scala ssh-agent gradle pod web-search capistrano dirhistory copydir copyfile xcode zsh_reload per-directory-history adb cp dirhistory extract fabric history postgres redis-cli supervisor svn-fast-info svn)
+
+## General
+plugins=(rysnc zsh-syntax-highlighting brew brew-cask autojump osx sublime colorize cp dirhistory extract history zsh_reload per-directory-history dirhistory copydir copyfile colored-man ssh-agent web-search)
+
+## Git
+plugins+=(git git-flow git-extras git-promt git-remote-branch gitfast gitignore github)
+
+## Ruby - Rails
+plugins+=(gem bundler rails rake-fast rbenv ruby capistrano)
+
+## Python - Djagon
+# plugins+=(python pip virtualenvwrapper virtualenv supervisor fabric django)
+
+## Scala
+# plugins+=(sbt scala)
+
+## Developmet - Other
+plugins+=(adb gradle pod xcode postgres redis-cli)
 
 # Autocompletion
 autoload -U compinit && compinit

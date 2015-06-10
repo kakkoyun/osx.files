@@ -15,10 +15,10 @@
 	"ignored_packages":
 	[
 		"Markdown",
+		"SublimeLinter-pep8",
 		"Vintage",
 		"SublimeLinter-pep257",
-		"RubyTest",
-		"SublimeLinter-pep8"
+		"RubyTest"
 	],
 	"indent_guide_options":
 	[
