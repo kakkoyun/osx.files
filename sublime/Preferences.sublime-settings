@@ -14,11 +14,11 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Markdown",
-		"SublimeLinter-pep8",
-		"Vintage",
 		"SublimeLinter-pep257",
-		"RubyTest"
+		"RubyTest",
+		"SublimeLinter-pep8",
+		"Markdown",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[

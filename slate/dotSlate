@@ -87,7 +87,7 @@ bind e:cmd hint ${showNormalHint}
 
 # Press cmd+g to get a grid, drag on that
 # grid to determine the size of an app
-bind g:cmd grid padding:5 0:6,2 1:8,2
+bind e:${hyper} grid padding:5 0:6,2 1:8,2
 
 # Use the Slate task switcher (beta)
 # bind tab:cmd switch
