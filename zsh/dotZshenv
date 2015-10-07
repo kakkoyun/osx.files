@@ -2,6 +2,7 @@ _CONFIG_HOST_SYSTEM=`uname`
 
 # Path
 # export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # Highlight
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
@@ -52,3 +53,6 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 function commands() {
   history | sed "s/^[0-9 ]*//" | sed "s/ *| */\n/g" | awk '{print $1}' | sort | uniq -c | sort -rn | head -n 100 > ~/commands.txt && cat ~/commands.txt
 }
+
+# Adb
+export PATH="/Users/Rev/Library/Android/sdk/platform-tools:$PATH"

@@ -1,23 +1,40 @@
 [
-  { "keys": ["ctrl+i"], "command": "reindent"},
-  { "keys": ["ctrl+shift+."], "command": "erb" },
-  { "keys": ["super+backspace"], "command": "run_macro_file", "args": {
-    "file": "Packages/Default/Delete Line.sublime-macro"
-    }
-  },
-  { "keys": ["f2"], "command": "intelli_docs" },
-  { "keys": ["super+shift+h"], "command": "hash_syntax" },
-  { "keys": ["alt+up"], "command": "expand_region" },
-  {
-    "keys": ["alt+down"],
-    "command": "expand_region",
-    "args": {"undo": true},
-    "context": [{ "key": "expand_region_soft_undo" }]
+{ "keys": ["ctrl+i"], "command": "reindent"},
+{ "keys": ["ctrl+shift+."], "command": "erb" },
+{ "keys": ["super+backspace"], "command": "run_macro_file", "args": {
+  "file": "Packages/Default/Delete Line.sublime-macro"
+}
+},
+{ "keys": ["f2"], "command": "intelli_docs" },
+{ "keys": ["super+shift+h"], "command": "hash_syntax" },
+{ "keys": ["alt+up"], "command": "expand_region" },
+{
+  "keys": ["alt+down"],
+  "command": "expand_region",
+  "args": {"undo": true},
+  "context": [{ "key": "expand_region_soft_undo" }]
   },
   {
     "keys": ["super+u"],
     "command": "expand_region",
     "args": {"undo": true},
     "context": [{ "key": "expand_region_soft_undo" }]
-  }
-]
+    },
+    { "keys": ["super+\\"], "command": "toggle_side_bar" },
+    { "keys": ["super+shift+\\"], "command": "reveal_in_side_bar"},
+    { "keys": ["super+shift+w"], "command": "close_others" },
+
+    { "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+    { "keys": ["super+shift+r"], "command": "goto_symbol_in_project" },
+    { "keys": ["super+alt+r"], "command": "goto_definition" },
+
+    { "keys": ["super+shift+t"], "command": "reopen_last_file" },
+
+    { "keys": ["super+x"], "command": "clipboard_manager_cut" },
+    { "keys": ["super+c"], "command": "clipboard_manager_copy" },
+    { "keys": ["super+v"], "command": "clipboard_manager_paste", "args": { "indent": true } },
+    { "keys": ["super+ctrl+v"], "command": "clipboard_manager_paste", "args": { "indent": false } },
+    { "keys": ["super+shift+v"], "command": "clipboard_manager_previous_and_paste" },
+    { "keys": ["super+alt+ctrl+v"], "command": "clipboard_manager_choose_and_paste" }
+    ]
