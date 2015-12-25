@@ -6,3 +6,9 @@
 *idea
 *.iml
 #*#
+.gradletasknamecache
+.ruby-version
+.cap_tasks*
+.rake_tasks*
+.rbenv-gemsets
+.byebug_history

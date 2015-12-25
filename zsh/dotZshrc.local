@@ -1,10 +1,10 @@
 # Plugins
 
 ## General
-plugins=(rysnc command-not-found zsh-syntax-highlighting brew brew-cask autojump osx sublime colorize cp dirhistory extract history zsh_reload per-directory-history dirhistory copydir copyfile colored-man ssh-agent web-search)
+plugins=(rysnc command-not-found zsh-syntax-highlighting brew brew-cask autojump osx sublime colorize cp extract history zsh_reload per-directory-history dirhistory copydir copyfile colored-man ssh-agent web-search)
 
 ## Git
-plugins+=(git gitfast git-extras git-promt git-remote-branch git-flow gitignore) # After hub deactivated: github
+plugins+=(git git-extras git-remote-branch git-flow)
 
 ## Ruby - Rails
 plugins+=(gem bundler rails rake-fast rbenv ruby capistrano)
