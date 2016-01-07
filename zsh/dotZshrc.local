@@ -30,3 +30,5 @@ setopt always_to_end
 unsetopt menu_complete
 unsetopt flowcontrol
 autoload -Uz compinit && compinit
+
+eval $(thefuck --alias)
