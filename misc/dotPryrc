@@ -9,13 +9,5 @@ Pry::Commands.command /^$/, "repeat last command" do
   _pry_.run_command Pry.history.to_a.last
 end
 
-begin
-  require 'hirb'
-  Hirb.enable
-  old_print = Pry.config.print
-  Pry.config.print = proc do |*args|
-    Hirb::View.view_or_page_output(args[1]) || old_print.call(*args)
-  end
-rescue LoadError
-  puts "Bummer!"
-end
+require "awesome_print"
+AwesomePrint.pry!

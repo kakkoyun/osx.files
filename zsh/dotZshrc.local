@@ -24,6 +24,7 @@ setopt always_to_end
 
 # Autojump
 [[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
+# [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # Autocompletion
 # autoload -U compinit && compinit
