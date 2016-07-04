@@ -9,14 +9,20 @@ plugins+=(git git-extras git-remote-branch git-flow)
 ## Ruby - Rails
 plugins+=(gem bundler rails rake-fast rbenv ruby capistrano)
 
+## Elixir - Phoenix
+plugins+=(elixir)
+
+## Javascript 
+plugins+=(npm)
+
 ## Python - Djagon
 # plugins+=(python pip virtualenvwrapper virtualenv supervisor fabric django)
 
 ## Scala
 # plugins+=(sbt scala)
 
-## Developmet - Other
-plugins+=(adb gradle pod xcode postgres redis-cli)
+## Development - Other
+plugins+=(adb gradle pod xcode postgres redis-cli vagrant)
 
 setopt auto_menu
 setopt complete_in_word
@@ -32,4 +38,11 @@ unsetopt menu_complete
 unsetopt flowcontrol
 autoload -Uz compinit && compinit
 
+# WTF
 eval $(thefuck --alias)
+
+# Tag.ag
+if (( $+commands[tag]  )); then
+      tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null  }
+        alias ag=tag
+fi

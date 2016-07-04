@@ -16,7 +16,6 @@
 	[
 		"Markdown",
 		"RubyTest",
-		"SublimeLinter-pep257",
 		"SublimeLinter-pep8",
 		"Vintage"
 	],

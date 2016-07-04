@@ -7,8 +7,7 @@
 *.iml
 #*#
 .gradletasknamecache
-.ruby-version
-.cap_tasks*
+.cap_tasks*:w:w
 .rake_tasks*
 .rbenv-gemsets
 .byebug_history
