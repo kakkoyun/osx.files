@@ -71,6 +71,7 @@ alias -g P="2>&1| pygmentize -l pytb"
 # Color
 alias -g C='| colorize'
 alias -g CD='| colordiff'
+# alias -g diff='colordiff'
 
 alias dud='du -d 1 -h'
 alias duf='du -sh *'

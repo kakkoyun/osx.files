@@ -1,13 +1,21 @@
+# System
 *~
 .DS_Store
+
+# Editor/IDE
 *.sublime-workspace
 *.db
 .idea
 *idea
 *.iml
+*.vscode
 #*#
+.codeintel/
+
+# Package Management/Build Tools
 .gradletasknamecache
-.cap_tasks*:w:w
+.cap_tasks*
 .rake_tasks*
 .rbenv-gemsets
 .byebug_history
+node_modules
