@@ -22,7 +22,7 @@ plugins+=(npm)
 # plugins+=(sbt scala)
 
 ## Development - Other
-plugins+=(adb gradle pod xcode postgres redis-cli vagrant)
+plugins+=(adb gradle pod xcode postgres redis-cli docker docker-compose)
 
 setopt auto_menu
 setopt complete_in_word
