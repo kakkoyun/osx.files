@@ -17,6 +17,7 @@ plugins+=(npm)
 
 ## Python - Djagon
 # plugins+=(python pip virtualenvwrapper virtualenv supervisor fabric django)
+plugins+=(python pip virtualenvwrapper virtualenv)
 
 ## Scala
 # plugins+=(sbt scala)
