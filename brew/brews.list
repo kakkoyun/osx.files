@@ -1,23 +1,146 @@
-Example usage:
-  brew [info | home | options ] [FORMULA...]
-  brew install FORMULA...
-  brew uninstall FORMULA...
-  brew search [foo]
-  brew list [FORMULA...]
-  brew update
-  brew upgrade [FORMULA...]
-  brew pin/unpin [FORMULA...]
-
-Troubleshooting:
-  brew doctor
-  brew install -vd FORMULA
-  brew [--env | --config]
-
-Brewing:
-  brew create [URL [--no-fetch]]
-  brew edit [FORMULA...]
-  open https://github.com/Homebrew/homebrew/wiki/Formula-Cookbook
-
-Further help:
-  man brew
-  brew home
+apr
+apr-util
+asciinema
+autoconf
+autojump
+automake
+awscli
+bdw-gc
+boost
+c-ares
+cabal-install
+cheat
+cloc
+cloog
+cmake
+colordiff
+crystal-lang
+cscope
+ctags
+curl
+d-bus
+dbus
+diff-so-fancy
+docker
+eigen
+elasticsearch
+elixir
+erlang
+exercism
+faac
+ffmpeg
+ffmpegthumbnailer
+fontconfig
+freetype
+gcc
+gd
+gdbm
+gettext
+ghc
+git
+git-cal
+git-flow
+git-fresh
+gitsh
+gmp
+gmp@4
+go
+gocmdpev
+gradle
+graphviz
+heroku
+htop-osx
+httpie
+hub
+icdiff
+icu4c
+ilmbase
+imagemagick
+imagemagick@6
+isl
+isl@0.12
+jansson
+jbig2dec
+jemalloc
+jpeg
+kibana
+lame
+libev
+libevent
+libexif
+libffi
+libmpc
+libpng
+libssh2
+libtiff
+libtool
+libyaml
+little-cms2
+llvm
+lua
+luajit
+macvim
+makedepend
+mercurial
+mongodb
+moreutils
+mpfr
+mtr
+mycli
+mysql
+mysql-connector-c++
+mysql-connector-odbc
+netcat
+nghttp2
+node
+numpy
+opencv
+opencv3
+openexr
+openssl
+ossp-uuid
+pandoc
+pcre
+pidcat
+pkg-config
+puma-dev
+pv
+python
+python3
+rbenv
+rcm
+readline
+redis
+ruby-build
+rust
+safe-rm
+scipy
+scons
+shellcheck
+spdylay
+sqlite
+ssh-copy-id
+stormssh
+subversion
+tag-ag
+texi2html
+the_silver_searcher
+thefuck
+tig
+tmux
+tree
+typesafe-activator
+unixodbc
+unused
+v8
+vim
+watch
+webp
+wxmac
+x264
+xctool
+xvid
+xz
+yasm
+zsh
+zsh-syntax-highlighting
