@@ -14,9 +14,10 @@ export SAVEHIST=50000
 export HISTCONTROL=ignoredups
 
 # Editors
-export SVN_EDITOR="mvim -v" # I am not using svn but just keep it, in case.
-export EDITOR="mvim -v"
-export GIT_EDITOR="mvim -v"
+export SVN_EDITOR="vim" # I am not using svn anymore but just keep it, in case.
+# export EDITOR="vim"
+export EDITOR="subl"
+export GIT_EDITOR="vim"
 
 # Force Language
 export LC_ALL=en_US.UTF-8
@@ -64,7 +65,6 @@ export GOBIN="$GOPATH/engine-room"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$GOBIN:$PATH"
-
 
 #path=(
 #   $path

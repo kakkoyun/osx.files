@@ -14,9 +14,9 @@ alias -g gsync='git pull && git push'
 alias -g gpall='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
 
 # Emacs
-alias ed='emacs --daemon'
-alias e='emacsclient -t'
-alias ec='emacsclient -c'
+# alias ed='emacs --daemon'
+# alias e='emacsclient -t'
+# alias ec='emacsclient -c'
 
 # vim
 alias vim='mvim -v'
@@ -49,7 +49,7 @@ alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 
 alias t='tail -f'
 
-# because typing 'cd' is A LOT of work!!
+# because typing 'cd' is A LOT of work!! // Some redundancy with git plugin.
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
