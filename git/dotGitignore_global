@@ -2,9 +2,9 @@
 *~
 .DS_Store
 
-# Editor/IDE
+# Editor/IDE/
 *.sublime-workspace
-*.db
+*.sublime-project
 .idea
 *idea
 *.iml
@@ -12,7 +12,8 @@
 #*#
 .codeintel/
 
-# Package Management/Build Tools
+# Development/Package Management/Build Tools
+*.db
 .gradletasknamecache
 .cap_tasks*
 .rake_tasks*
