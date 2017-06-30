@@ -14,9 +14,9 @@ export SAVEHIST=50000
 export HISTCONTROL=ignoredups
 
 # Editors
-export SVN_EDITOR="vim" # I am not using svn anymore but just keep it, in case.
+# export SVN_EDITOR="vim"
 # export EDITOR="vim"
-export EDITOR="subl"
+export EDITOR="code"
 export GIT_EDITOR="vim"
 
 # Force Language

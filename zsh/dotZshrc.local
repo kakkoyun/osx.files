@@ -17,21 +17,29 @@ plugins+=(npm)
 
 ## Python - Djagon
 # plugins+=(python pip virtualenvwrapper virtualenv supervisor fabric django)
-plugins+=(python pip virtualenvwrapper virtualenv)
 
 ## Scala
 # plugins+=(sbt scala)
 
-## Development - Other
-plugins+=(adb gradle pod xcode postgres redis-cli docker docker-compose)
+## Android
+# plugins+=(adb gradle)
+
+## iOS
+# plugins+=(pod xcode)
+
+## Storage
+plugins+=(postgres redis-cli)
+
+## Development
+plugins+=(docker docker-compose asdf)
 
 setopt auto_menu
 setopt complete_in_word
 setopt always_to_end
 
 # Autojump
-[[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
 # [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+[[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
 
 # Autocompletion
 # autoload -U compinit && compinit
@@ -42,9 +50,11 @@ autoload -Uz compinit && compinit
 # WTF
 eval $(thefuck --alias)
 
+# AWS
+source /usr/local/share/zsh/site-functions/_aws
+
 # Tag.ag
 if (( $+commands[tag]  )); then
       tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null  }
         alias ag=tag
 fi
-source /usr/local/share/zsh/site-functions/_aws
