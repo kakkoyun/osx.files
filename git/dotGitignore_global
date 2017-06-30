@@ -20,3 +20,4 @@
 .rbenv-gemsets
 .byebug_history
 node_modules
+railways.cache
